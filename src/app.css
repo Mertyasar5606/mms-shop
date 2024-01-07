@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   !navbar                                  */
+/* -------------------------------------------------------------------------- */
+
+.navbar {
+    background-color: black;
+    color: white;
+   padding: 1rem; /* Add some padding to the navbar */
+ 
+}
+
+.navbar p {
+    margin-right: 1rem;
+}
+.navbar ul{
+display: flex;
+justify-content: end;
+align-items: center;
+gap: 1rem;
+list-style: none;
+
+}
+ .nav-item .nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                !NAVBAR FNİSH                               */
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   ! home                                    */
+/* -------------------------------------------------------------------------- */
+.sponsor{
+    background-image: url(https://wallpapers.com/images/featured/pattern-4u7ed6koskqhcez1.jpg);
+    color: white;
+   
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                !home finish                                */
+/* -------------------------------------------------------------------------- */
+
+
+.forms {
+    color: black;
+    text-align: center;
+    margin-top: 2rem; /* Adjusted margin for better spacing */
+}
+
+.email input,
+.sifre input {
+    width: 20%; /* Make input fields responsive to the container */
+    height: 1.5rem; /* Adjusted height for better visibility */
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.btn {
+    background-color: rgb(241, 131, 6);
+    width: 10%; /* Make button width responsive to the container */
+    border-radius: 1rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (min-width: 600px) {
+    .forms {
+        margin-top: 5rem; /* Adjusted margin for larger screens */
+    }
+}
