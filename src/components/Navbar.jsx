@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { LoginContext } from '../context/LoginContext'
+
+
+
 
 function Navbar() {
-  return (
+const {shop,setshop}= useContext(LoginContext)
+  
+return (
     <div>
       <nav className='navbar'>
         <img src="" alt="" />
@@ -28,8 +34,22 @@ function Navbar() {
     Contact
     </Link>
   </li>
+  </ul>
 
-</ul>
+  {shop.email && shop.password ? (
+    <Link 
+    className='nav-link'
+    to={"/login"}
+    onClick={()=>setshop({email:"",password:""})}>Logout
+    </Link>
+
+  ):(
+    <Link className='nav-link' to={"/login"}>
+      login
+    </Link>
+  )}
+
+
   
    
 

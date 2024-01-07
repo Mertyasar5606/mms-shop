@@ -40,8 +40,8 @@ function Home() {
     </div>
      
     </div>
-    <div className='text-center  text-wrap text-[2.5rem]'> 
-      biz kimiz
+    <div className=''> 
+      
     </div>
 
     </div>

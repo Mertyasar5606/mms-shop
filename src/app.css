@@ -15,22 +15,25 @@
 .navbar {
     background-color: black;
     color: white;
-   padding: 1rem; /* Add some padding to the navbar */
- 
+    padding: 1rem;
+    /* Add some padding to the navbar */
+
 }
 
 .navbar p {
     margin-right: 1rem;
 }
-.navbar ul{
-display: flex;
-justify-content: end;
-align-items: center;
-gap: 1rem;
-list-style: none;
+
+.navbar ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
 
 }
- .nav-item .nav-link{
+
+.nav-item .nav-link {
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -47,35 +50,72 @@ list-style: none;
 /* -------------------------------------------------------------------------- */
 /*                                   ! home                                    */
 /* -------------------------------------------------------------------------- */
-.sponsor{
+.sponsor {
     background-image: url(https://wallpapers.com/images/featured/pattern-4u7ed6koskqhcez1.jpg);
     color: white;
-   
+
+
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                !home finish                                */
 /* -------------------------------------------------------------------------- */
 
+/*  */
+
+/* -------------------------------------------------------------------------- */
+/*                                   !about                                   */
+/* -------------------------------------------------------------------------- */
+.people {
+    background-image: url(https://4kwallpapers.com/images/wallpapers/geometric-pattern-spiral-neon-gradient-black-background-5k-2880x1800-1202.png);
+    color: white;
+    background-size: cover;
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   !about fnish                                   */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                   !login                                   */
+/* -------------------------------------------------------------------------- */
+
+
 
 .forms {
-    color: black;
+    color: white;
+    font-size: 25px;
     text-align: center;
-    margin-top: 2rem; /* Adjusted margin for better spacing */
+    display: inline-block;
+    margin-top: 15rem !important;
+    margin-left: 40%;
+    
+
+
+
+
+
 }
+
+
 
 .email input,
 .sifre input {
-    width: 20%; /* Make input fields responsive to the container */
-    height: 1.5rem; /* Adjusted height for better visibility */
+    color: black;
+font-size: 19px;
+    width: 20rem;
+    /* Make input fields responsive to the container */
+    height: 1.5rem;
+    /* Adjusted height for better visibility */
     border-radius: 10px;
-    text-align: center;
     margin-top: 1rem;
 }
 
 .btn {
     background-color: rgb(241, 131, 6);
-    width: 10%; /* Make button width responsive to the container */
+    width: 40%;
+    /* Make button width responsive to the container */
     border-radius: 1rem;
     color: white;
     margin-top: 1rem;
@@ -84,6 +124,11 @@ list-style: none;
 /* Media queries for responsiveness */
 @media only screen and (min-width: 600px) {
     .forms {
-        margin-top: 5rem; /* Adjusted margin for larger screens */
+        margin-top: 5rem;
+        /* Adjusted margin for larger screens */
     }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                   !login  fnish                             */
+/* -------------------------------------------------------------------------- */

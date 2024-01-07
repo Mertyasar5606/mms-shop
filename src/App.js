@@ -1,4 +1,4 @@
-import {  Routes, Route, Navigate } from 'react-router-dom';
+import {  Routes, Route, Navigate, BrowserRouter } from 'react-router-dom';
 import './app.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -7,12 +7,21 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Login from "./pages/Login";
 import Shop from './pages/Shop';
+import React, { useState } from 'react';
+import { LoginContext } from './context/LoginContext';
+import PrivateRouter from './pages/PrivateRouter';
 
 function App() {
+  const [shop, setshop] = useState({email:"", password:""})
+  
   return (
 
     <div className="App">
-      <Navbar />
+
+
+  <LoginContext.Provider value={{shop,setshop}}>
+    <BrowserRouter>
+    <Navbar />
       
       {/* //! Router */}
         <Routes>
@@ -20,17 +29,17 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
-          <Route
-            path="/shop"
-            element={
-              // Only allow access to Shop if the user is logged in
-              localStorage.getItem('isLoggedIn') ? <Shop /> : <Navigate to="/login" />
-            }
-          />
+          <Route path="/shop" element={<PrivateRouter/>} >
+            <Route path="" element={<Shop/>} />
+          </Route>
+
+          <Route e path="*" element={<Navigate to="/" />}/>
         </Routes>
       {/* //! Router */}
 
       <Footer />
+    </BrowserRouter>
+  </LoginContext.Provider>
     </div>
 
   );
