@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { LoginContext } from '../context/LoginContext'
-
+import { CiLogin } from "react-icons/ci";
+import { IoIosLogOut } from "react-icons/io";
 
 
 
@@ -36,18 +37,22 @@ return (
   </li>
   </ul>
 
+<div className='font-bold text-[25px]  mr-[2rem]'>
   {shop.email && shop.password ? (
+  <div className='flex '> 
     <Link 
     className='nav-link'
     to={"/login"}
-    onClick={()=>setshop({email:"",password:""})}>Logout
+    onClick={()=>setshop({email:"",password:""})}>Logout<IoIosLogOut /> 
     </Link>
-
+    </div>
   ):(
     <Link className='nav-link' to={"/login"}>
-      login
+      login<CiLogin/>
     </Link>
+   
   )}
+  </div>
 
 
   
